@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "DQN task",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-O3",
+				"-I",
+				"${workspaceFolder}\\src",
+				"-I",
+				"${workspaceFolder}\\src\\mathlib",
+				"-I",
+				"${workspaceFolder}\\src\\gymlab",
+				"-I",
+				"${workspaceFolder}\\src\\rllib\\includes",
+				"-I",
+				"${workspaceFolder}\\src\\neurallib",
+				"-I",
+				"${workspaceFolder}\\src\\uilib\\includes",
+				"-I",
+				"${workspaceFolder}\\src\\renderlib\\includes",
+				"${workspaceFolder}\\src\\**.cpp",
+				"${workspaceFolder}\\src\\gymlab\\**.cpp",
+				"${workspaceFolder}\\src\\rllib\\**.cpp",
+				"${workspaceFolder}\\src\\renderlib\\src\\**.cpp",
+				"${workspaceFolder}\\src\\renderlib\\src\\shapes\\**.cpp",
+				"${workspaceFolder}\\src\\uilib\\src\\**.cpp",
+				"-lkernel32",
+				"-luser32",
+				"-lgdi32",
+				"-lopengl32",
+				"-o",
+				"${workspaceFolder}\\bin\\exec.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
